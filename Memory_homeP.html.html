@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            /* justify-content: center;
+                align-items: center; */
+            background-image: url("img/homebg.jfif");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+
+        }
+
+        .memorygame {
+            width: 640px;
+            height: 640px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            perspective: 1000px;
+            transform-style: preserve-3d;
+        }
+
+        .heading {
+            color: whitesmoke;
+            margin: auto;
+            font-size: 25px;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+
+        .btn {
+
+            margin-top: 50px;
+            float: right;
+        }
+
+        .btn:hover{
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="memorygame">
+        <div class="heading">
+            <h1>memory maping game</h1>
+        </div>
+        <div class="btn">
+          <a href="memory card.html">  <img src="img/play.png" alt="" width="150px" height="70px"></a>
+
+        </div>
+    </div>
+</body>
+
+</html>

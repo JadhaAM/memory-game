@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* border: 2px solid white; */
+}
+
+body {
+  height: 100vh;
+  display: flex;
+
+  /* justify-content: center;
+  align-items: center; */
+background-image: linear-gradient( rgb(240, 89, 89),rgb(209, 92, 112),rgb(253, 227, 77));
+  
+}
+.heading {
+
+  margin: auto;
+  font-size: 25px;
+  height: 60%;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+    justify-content: center;
+  align-items: center; 
+}
+.time{
+  font-size: 25px;
+  margin-top: 20px;
+  text-align: center;
+   
+  font-family: 'Courier New', Courier, monospace;
+  text-decoration: underline;
+}
+.btn{
+  
+  margin-top: 50px;
+}
+
+.memorygame {
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.card {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  cursor: pointer;
+  background-color: chocolate;
+  border-radius: 5%;
+  position: relative;
+  transform: scaleX(1);
+  transform-style: preserve-3d;
+  transition: transform .9s;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+
+.card:active {
+  transform: scale(0.97);
+  transition: transform .10s;
+}
+
+.card {
+  transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background: #1C7CCC;
+  backface-visibility: hidden;
+}
+
+ .front-face {
+  transition: transform .9s;
+   transform: rotateY(-180deg); 
+}
+/* .card.flip.back-face {
+  transform: rotateY(180deg);
+}  */
+.card:hover .back-face {
+  transform: rotateY(180deg);
+} 
+
